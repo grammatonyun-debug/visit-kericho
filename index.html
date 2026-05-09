@@ -1,514 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<title>Visit Kericho</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Visit Kericho</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-body{
-animation:fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.card{
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}  
 
 /* RESET */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
-background:#f4fff4;
-color:#222;
-overflow-x:hidden;
-}
-
-/* HEADER */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 6%;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-color:white;
-}
-
-.logo h2{
-font-size:28px;
-}
-
-.nav-links{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-transition:0.3s;
-font-size:15px;
-}
-
-.nav-links a:hover{
-color:lightgreen;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff;
 }
 
 /* HERO */
-
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
-.hero-content h1{
-font-size:70px;
-margin-bottom:20px;
+.hero h1{
+    font-size:55px;
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
 }
 
-.hero-content p{
-font-size:24px;
-margin-bottom:30px;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.hero-buttons button{
-padding:15px 35px;
-border:none;
-border-radius:35px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.explore-btn{
-background:green;
-color:white;
-}
-
-.book-btn{
-background:white;
-color:green;
-}
-
-.hero-buttons button:hover{
-transform:scale(1.05);
-}
-
-/* SEARCH BAR */
-
-.search-section{
-margin-top:-50px;
-display:flex;
-justify-content:center;
-padding:20px;
-}
-
-.search-box{
-background:white;
-width:85%;
-max-width:900px;
-padding:20px;
-border-radius:25px;
-display:flex;
-gap:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
-flex-wrap:wrap;
-}
-
-.search-box input,
-.search-box select{
-flex:1;
-padding:15px;
-border:none;
-outline:none;
-border-radius:12px;
-background:#f0f0f0;
-}
-
-.search-box button{
-padding:15px 25px;
-border:none;
-border-radius:12px;
-background:green;
-color:white;
-cursor:pointer;
-}
-
-/* GENERAL */
-
-section{
-padding:100px 8%;
-}
-
+/* SECTION TITLE */
 .section-title{
-text-align:center;
-font-size:45px;
-color:green;
-margin-bottom:50px;
+    text-align:center;
+    font-size:35px;
+    margin:50px 0 20px;
+    color:#0b6623;
 }
 
-/* CARDS */
+/* HOTELS */
+.hotels{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
 
-.card-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.hotel-card{
+    width:300px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hotel-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.hotel-card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#0b6623;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* HIDEOUTS */
+.hideouts{
+    padding:50px 20px;
+    background:#f5f5f5;
+}
+
+.hideout-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
 
 .card{
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
+    width:300px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    background:white;
 }
 
 .card img{
-width:100%;
-height:250px;
-object-fit:cover;
+    width:100%;
+    height:200px;
+    object-fit:cover;
 }
 
-.card-content{
-padding:25px;
+.card p{
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
 }
 
-.card-content h3{
-color:green;
-margin-bottom:10px;
-}
-
-.card-content p{
-margin-bottom:15px;
-line-height:1.6;
-}
-
-.card-content ul{
-padding-left:20px;
-margin-bottom:20px;
-}
-
-.card-content li{
-margin-bottom:8px;
-}
-
-.card-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.card-buttons button{
-flex:1;
-padding:12px;
-border:none;
-border-radius:12px;
-cursor:pointer;
-background:green;
-color:white;
-}
-
-.availability-btn{
-background:black;
-}
-
-/* PLAN A TRIP */
-
-.trip-box{
-background:linear-gradient(to right,green,darkgreen);
-padding:60px;
-border-radius:30px;
-text-align:center;
-color:white;
-}
-
-.trip-box h2{
-font-size:45px;
-margin-bottom:20px;
-}
-
-.trip-box p{
-font-size:18px;
-margin-bottom:25px;
-}
-
-.trip-box button{
-padding:15px 35px;
-border:none;
-border-radius:30px;
-background:white;
-color:green;
-cursor:pointer;
-font-size:16px;
-}
-
-/* REVIEWS */
-
-.review-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.review{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-.review h4{
-color:green;
-margin-bottom:10px;
-}
-
-/* CTA */
-
-.cta{
-background:
-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
-
-background-size:cover;
-background-position:center;
-padding:120px 20px;
-text-align:center;
-color:white;
-}
-
-.cta h2{
-font-size:55px;
-margin-bottom:25px;
-}
-
-.cta button{
-padding:16px 35px;
-border:none;
-border-radius:35px;
-background:green;
-color:white;
-font-size:18px;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-
-footer h2{
-margin-bottom:15px;
-}
-
-/* MOBILE */
-  
-
-@media(max-width:768px){
-  @media (max-width: 768px) {
-
-    header {
-        padding: 10px 0;
-        height:auto;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        align-items:center;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 10px;
-        padding: 5px 10px;
-        height:auto;
-    }
-
-    nav a {
-        font-size:14px;
-        padding: 6px 10px;
-        flex-shrink: 0;
-    }
-
-    .logo {
-       font-size:26px;
-       margin:0;
-       padding:0 10px
-        
-    }
-
-    .hero {
-        margin-top: 20px;
-    }
-}
-    }
-
-    .logo {
-        font-size: 22px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .hero {
-        margin-top: 120px;
-    }
-}
-
-.navbar{
-flex-direction:column;
-gap:15px;
-}
-
-.nav-links{
-justify-content:center;
-}
-
-.hero-content h1{
-font-size:45px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-.search-box{
-flex-direction:column;
-}
-
-.cta h2{
-font-size:38px;
-}
-
-.trip-box{
-padding:35px;
-}
-
-}
-  @media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    nav a {
-         display: inline-block;
-         padding: 6px 10px;
-         font-size: 14px;
-    }
-
-    .hero {
-        height: auto;
-        padding: 80px 20px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .container {
-        width: 95%;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .hotel-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-    }
-
-    iframe {
-        height: 250px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-    }
+/* WHATSAPP BUTTON */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 </style>
@@ -517,538 +124,58 @@ padding:35px;
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<div class="navbar">
-
-<div class="logo">
-
-<svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-
-<path d="M50 10C30 25 20 45 25 65C30 85 50 90 50 90C50 90 70 85 75 65C80 45 70 25 50 10Z"
-fill="lightgreen"/>
-
-<path d="M50 20V80"
-stroke="green"
-stroke-width="4"/>
-
-</svg>
-
-<h2>Visit Kericho</h2>
-
-</div>
-
-<nav class="nav-links">
-
-<a href="#home">Home</a>
-<a href="#hotels">Hotels</a>
-<a href="#gems">Hidden Gems</a>
-<a href="#tours">Tours & Guides</a>
-<a href="#trip">Plan A Trip</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</div>
-
-</header>
-
 <!-- HERO -->
-
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>WELCOME TO KERICHO</h1>
-
-<p>Discover Kenya's Green Paradise</p>
-
-<div class="hero-buttons">
-
-<button onclick="scrollHotels()" class="explore-btn">
-Explore Now
-</button>
-
-<button onclick="bookTour()" class="book-btn">
-Book Tour
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SEARCH BAR -->
-
-<div class="search-section">
-
-<div class="search-box">
-
-<input type="text" placeholder="Search hotels, tours, places...">
-
-<select>
-<option>Sort By Price</option>
-<option>Low To High</option>
-<option>High To Low</option>
-</select>
-
-<select>
-<option>Sort By Rating</option>
-<option>5 Stars</option>
-<option>4 Stars</option>
-<option>3 Stars</option>
-</select>
-
-<button>Search</button>
-
-</div>
-
+<div class="hero">
+    <h1>Welcome to Kericho Tourism</h1>
 </div>
 
 <!-- HOTELS -->
+<h2 class="section-title">Hotels</h2>
 
-<section id="hotels">
+<div class="hotels">
 
-<h2 class="section-title">Featured Hotels</h2>
+    <div class="hotel-card">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+        <button>Book Now</button>
+    </div>
 
-<div class="card-container">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-
-<div class="card-content">
-
-<h3>Tea View Hotel</h3>
-
-<p>⭐⭐⭐⭐⭐</p>
-
-<p>KES 8,500 / Night</p>
-
-<p>
-Luxury hotel overlooking beautiful tea plantations.
-</p>
-
-<ul>
-<li>Free WiFi</li>
-<li>Swimming Pool</li>
-<li>Restaurant</li>
-<li>Tea View</li>
-</ul>
-
-<div class="card-buttons">
-
-<button onclick="viewDetails()">
-View Details
-</button>
-
-<button onclick="checkAvailability()" class="availability-btn">
-Check Availability
-</button>
+    <div class="hotel-card">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+        <button>Book Now</button>
+    </div>
 
 </div>
 
-</div>
+<!-- HIDEOUTS -->
+<h2 class="section-title">Hidden Hideouts</h2>
+
+<div class="hideouts">
+
+    <div class="hideout-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+            <p>Tea Plantation Trails</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520962917960-3a0d5f1b7a5b">
+            <p>Waterfalls</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Hiking Adventures</p>
+        </div>
+
+    </div>
 
 </div>
 
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-
-<div class="card-content">
-
-<h3>Highland Resort</h3>
-
-<p>⭐⭐⭐⭐</p>
-
-<p>KES 6,000 / Night</p>
-
-<p>
-Experience comfort in Kericho’s cool climate.
-</p>
-
-<ul>
-<li>Free Breakfast</li>
-<li>Parking</li>
-<li>Tea Garden View</li>
-<li>Tour Guides</li>
-</ul>
-
-<div class="card-buttons">
-
-<button onclick="viewDetails()">
-View Details
-</button>
-
-<button onclick="checkAvailability()" class="availability-btn">
-Check Availability
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- HIDDEN GEMS -->
-
-<section id="gems">
-
-<h2 class="section-title">Hidden Gems</h2>
-
-<div class="card-container">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-
-<div class="card-content">
-
-            
-
-<style>
-
-.hideouts{
-    padding:80px 20px;
-    background:#f5f5f5;
-    text-align:center;
-}
-
-.hideouts h1{
-    font-size:40px;
-    color:#0b6623;
-    margin-bottom:10px;
-}
-
-.hideouts p{
-    font-size:18px;
-    margin-bottom:40px;
-    color:#555;
-}
-
-.hideout-container{
-    display:flex;
-    gap:25px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.card{
-    position:relative;
-    width:350px;
-    height:450px;
-    overflow:hidden;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.card img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:0.5s;
-}
-
-.card:hover img{
-    transform:scale(1.1);
-}
-
-.overlay{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:25px;
-    background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color:white;
-    text-align:left;
-}
-
-.overlay h2{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.overlay p{
-    color:white;
-    font-size:15px;
-    margin-bottom:15px;
-}
-
-.overlay button{
-    padding:12px 25px;
-    border:none;
-    background:#00b140;
-    color:white;
-    font-size:16px;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.overlay button:hover{
-    background:white;
-    color:#00b140;
-}
-
-/* MOBILE RESPONSIVE */
-@media(max-width:768px){
-
-.hideout-container{
-    flex-direction:column;
-    align-items:center;
-}
-
-.card{
-    width:95%;
-}
-
-.hideouts h1{
-    font-size:30px;
-}
-
-}
-
-</style>
-
-<!-- HOTELS SECTION -->
-<section class="hotels">
-   ...
-</section>
-
-<p>
-Beautiful trails through endless tea plantations.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-
-<div class="card-content">
-
-<h3>Sunrise Hills</h3>
-
-<p>
-Enjoy breathtaking sunrise scenery in Kericho.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TOURS -->
-
-<section id="tours">
-
-<h2 class="section-title">Tours & Guides</h2>
-
-<div class="card-container">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-
-<div class="card-content">
-
-<h3>Tea Farm Tours</h3>
-
-<p>
-Experience tea harvesting and factory visits.
-</p>
-
-<button onclick="bookTour()">
-Book Tour
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1519046904884-53103b34b206">
-
-<div class="card-content">
-
-<h3>Photography Tours</h3>
-
-<p>
-Capture beautiful green landscapes and wildlife.
-</p>
-
-<button onclick="bookTour()">
-Book Tour
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PLAN TRIP -->
-
-<section id="trip">
-
-<div class="trip-box">
-
-<h2>Plan Your Trip</h2>
-
-<p>
-Get travel ideas, local guides and unforgettable adventures.
-</p>
-
-<button onclick="planTrip()">
-Start Planning
-</button>
-
-</div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section id="reviews">
-
-<h2 class="section-title">What Visitors Say</h2>
-
-<div class="review-container">
-
-<div class="review">
-
-<h4>⭐⭐⭐⭐⭐ Brian</h4>
-
-<p>
-Amazing tea plantation experience.
-</p>
-
-</div>
-
-<div class="review">
-
-<h4>⭐⭐⭐⭐ Sarah</h4>
-
-<p>
-Best peaceful destination in Kenya.
-</p>
-
-</div>
-
-<div class="review">
-
-<h4>⭐⭐⭐⭐⭐ James</h4>
-
-<p>
-The hotel and tours were perfectly organized.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Ready To Explore Kericho?</h2>
-
-<button onclick="scrollHotels()">
-Plan Your Adventure
-</button>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer id="contact">
-  <h2>Find Us in Kericho</h2>
-
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.123456!2d35.2833!3d-0.3676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768"
-width="100%" 
-height="400" 
-style="border:0; border-radius:15px;" 
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-
-<h2>Visit Kericho</h2>
-
-<p>Explore Nature • Adventure • Culture</p>
-
-<br>
-
-<p>Email: visitkericho@gmail.com</p>
-
-</footer>
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-function scrollHotels(){
-
-document.getElementById("hotels")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-function bookTour(){
-
-window.open(
-"https://wa.me/254700000000",
-"_blank"
-);
-
-}
-
-function viewDetails(){
-
-alert(
-"Opening Hotel Details..."
-);
-
-}
-
-function checkAvailability(){
-
-alert(
-"Rooms Available For Selected Dates"
-);
-
-}
-
-function planTrip(){
-
-alert(
-"Trip Planning Feature Coming Soon"
-);
-
-}
-
-</script>
+<!-- WHATSAPP BOOKING -->
+<a class="whatsapp" href="https://wa.me/254106014944" target="_blank">
+    Book on WhatsApp
+</a>
 
 </body>
 </html>
